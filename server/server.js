@@ -28,3 +28,17 @@ mongoose
 });
 
 
+app.get("/", (req, res) => {
+    res.send("the school management api is running..");
+});
+
+// In the future, we will import routes like:
+// app.use("/api/auth", authRoutes);
+// app.use("/api/users", userRoutes);
+// app.use("/api/courses", courseRoutes);
+
+//....Start server..
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
