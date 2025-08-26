@@ -5,6 +5,8 @@ import mongoose from "mongoose";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import courseRoutes from "./routes/courseRoutes.js";
+import gradeRoutes from "./routes/gradeRoutes.js";
+
 
 //load env variables from .env file
 dotenv.config();
@@ -39,6 +41,7 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/courses", courseRoutes);
+app.use("/api/grades", gradeRoutes);
 
 
 //....Start server..
