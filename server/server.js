@@ -6,6 +6,8 @@ import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import courseRoutes from "./routes/courseRoutes.js";
 import gradeRoutes from "./routes/gradeRoutes.js";
+import attendanceRoutes from "./routes/attendanceRoutes.js";
+
 
 
 //load env variables from .env file
@@ -42,6 +44,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/courses", courseRoutes);
 app.use("/api/grades", gradeRoutes);
+app.use("/api/attendance", attendanceRoutes);
 
 
 //....Start server..
