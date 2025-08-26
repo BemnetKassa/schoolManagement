@@ -2,6 +2,7 @@ import express from "express"
 import dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
+import authRoutes from "./routes/authRoutes.js";
 
 //load env variables from .env file
 dotenv.config();
@@ -32,10 +33,8 @@ app.get("/", (req, res) => {
     res.send("the school management api is running..");
 });
 
-// In the future, we will import routes like:
-// app.use("/api/auth", authRoutes);
-// app.use("/api/users", userRoutes);
-// app.use("/api/courses", courseRoutes);
+// Use routes
+app.use("/api/auth", authRoutes);
 
 //....Start server..
 const PORT = process.env.PORT || 5000;
