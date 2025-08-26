@@ -24,3 +24,10 @@ const gradeSchema = new mongoose.Schema(
     grade: {
       type: String,
       required: true, // e.g. "A", "B+", "75%"
+    },
+  },
+  { timestamps: true }
+);
+
+const Grade = mongoose.model("Grade", gradeSchema);
+export default Grade;
