@@ -1,5 +1,5 @@
 import express from "express";
-import Notice from "../models/Notice.js";
+import Notice from "../models/notice.js";
 import { protect, authorizeRoles } from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
