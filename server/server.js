@@ -7,6 +7,8 @@ import userRoutes from "./routes/userRoutes.js";
 import courseRoutes from "./routes/courseRoutes.js";
 import gradeRoutes from "./routes/gradeRoutes.js";
 import attendanceRoutes from "./routes/attendanceRoutes.js";
+import noticeRoutes from "./routes/noticeRoutes.js";
+
 
 
 
@@ -45,6 +47,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/courses", courseRoutes);
 app.use("/api/grades", gradeRoutes);
 app.use("/api/attendance", attendanceRoutes);
+app.use("/api/notices", noticeRoutes);
 
 
 //....Start server..
